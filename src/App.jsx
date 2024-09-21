@@ -6,7 +6,10 @@ import {TiSocialLinkedin} from "react-icons/ti"
 import {BiLogoGmail} from "react-icons/bi"
 
 function App() {
-  const [count, setCount] = useState(0);
+
+  const handleSocialOpen = (url) => {
+    window.open(url, "_blank").focus();
+  };
 
   return (
     <div className="w-full min-h-screen bg-[#060719]">
@@ -22,19 +25,19 @@ function App() {
           <h2 className="text-white">Website | Mobile App | Software</h2>
         </div>
         <div className="w-full max-w-2xl grid grid-cols-2 md:grid-cols-4 gap-2 pt-5 text-white">
-          <div className="flex border-2 border-gray-700 rounded-lg p-2 items-center">
+          <div onClick={()=>handleSocialOpen('https://wa.me/917887557175')} className="flex border-2 border-gray-700 rounded-lg p-2 items-center">
             <AiOutlineWhatsApp size={30}/>
             <h2 className="px-2 font-semibold">WhatsApp</h2>
           </div>
           <div className="flex border-2 border-gray-700 rounded-lg p-2 items-center">
             <FaPhoneAlt size={20}/>
-            <h2 className="px-2 font-semibold">7887557175</h2>
+            <h2 onClick={()=>handleSocialOpen('tel:555-555-5555')} className="px-2 font-semibold">7887557175</h2>
           </div>
-          <div className="flex border-2 border-gray-700 rounded-lg p-2 items-center">
+          <div onClick={()=>handleSocialOpen('https://www.linkedin.com/in/soham-pathak-86726b22a/')} className="flex border-2 border-gray-700 rounded-lg p-2 items-center">
             <TiSocialLinkedin size={30}/>
             <h2 className="px-2 font-semibold">Linkedin</h2>
           </div>
-          <div className="flex border-2 border-gray-700 rounded-lg p-2 items-center">
+          <div onClick={()=>handleSocialOpen('https://mail.google.com/mail/?view=cm&fs=1&to=pathaksoham2003@gmail.com')} className="flex border-2 border-gray-700 rounded-lg p-2 items-center">
             <BiLogoGmail size={30}/>
             <h2 className="px-2 font-semibold">Gmail</h2>
           </div>
