@@ -4,6 +4,7 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 import { FaPhoneAlt } from "react-icons/fa";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { BiLogoGmail } from "react-icons/bi";
+import { BsTwitterX } from "react-icons/bs";
 
 function App() {
   console.log(window.innerWidth);
@@ -14,7 +15,7 @@ function App() {
   return (
     <div className="w-full min-h-screen bg-[#060719]">
       <div className="w-full flex flex-col items-center justify-center p-10">
-        <div className="w-28 h-28 aspect-square rounded-full overflow-hidden">
+        <div className="w-28 h-28 hover:scale-110 transition-transform duration-500 shadow-md shadow-cyan-300 aspect-square rounded-full overflow-hidden">
           <img src={NEXORA} />
         </div>
         <div className="flex flex-col items-center">
@@ -64,6 +65,28 @@ function App() {
           >
             <BiLogoGmail size={30} />
             <h2 className="px-2 font-semibold">Gmail</h2>
+          </div>
+          <div
+            onClick={() =>
+              handleSocialOpen(
+                "https://x.com/pathaksoham2003"
+              )
+            }
+            className="flex border-2 border-gray-700 rounded-lg p-2 items-center"
+          >
+            <BsTwitterX size={20} />
+            <h2 className="px-2 font-semibold">X / Twitter</h2>
+          </div>
+          <div
+            onClick={() =>
+              handleSocialOpen(
+                "https://www.linkedin.com/in/soham-pathak-86726b22a/"
+              )
+            }
+            className="flex border-2 border-gray-700 rounded-lg p-2 items-center"
+          >
+            <TiSocialLinkedin size={30} />
+            <h2 className="px-2 font-semibold">Linkedin</h2>
           </div>
         </div>
       </div>
